@@ -1,9 +1,11 @@
-import { Box, Button, Input, InputWrapper, PasswordInput, Title } from '@mantine/core'
+import { Box, Button, Group, Input, InputWrapper, PasswordInput, Title } from '@mantine/core'
 import { useForm } from '@mantine/hooks'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SessionContext } from '../contexts/SessionContext'
 import { login } from '../utils/helper'
+import React, { Component }  from 'react';
+
 
 
 const LoginPage = () => {
@@ -35,7 +37,8 @@ const LoginPage = () => {
   }
 
   return (
-    <Box>
+    <body className='bg-yellow'>
+      <Box sx={{ maxWidth: 340 }} mx="auto" >
       <Title>Login</Title>
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <InputWrapper
@@ -49,9 +52,15 @@ const LoginPage = () => {
         <InputWrapper required label='Password' description='Your password'>
           <PasswordInput {...form.getInputProps('password')} />
         </InputWrapper>
+
+        <Group position="right" mt="md">
         <Button type='submit'>Login</Button>
+        </Group>
+       
       </form>
     </Box>
+    </body>
+    
   )
 }
 

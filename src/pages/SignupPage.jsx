@@ -1,7 +1,9 @@
-import { Box, Button, Input, InputWrapper, PasswordInput, Title } from '@mantine/core'
+import {Space, Text, Box, Button, Input, InputWrapper, PasswordInput, Title } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { useNavigate } from 'react-router-dom'
 import { signup } from '../utils/helper'
+import React, { Component }  from 'react';
+import '../App.css';
 
 const SignupPage = () => {
   const navigate = useNavigate()
@@ -31,23 +33,36 @@ const SignupPage = () => {
   }
 
   return (
-    <Box>
-      <Title>Signup</Title>
+    
+    <body className='bg-yellow'>
+      <Box sx={{ maxWidth: 340 }} mx="auto">
+      <Title>Sign up</Title>
+      <Space h="md" />
+      <Text size="xs"  >Launch a crowdfunding in 5 minutes or donate generously.</Text>
+      <Space h="md" />
+
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <InputWrapper
           required
           label='Username'
-          description='Your unique username'
+          // description='Your unique username'
        
         >
           <Input {...form.getInputProps('username')} />
         </InputWrapper>
-        <InputWrapper required label='Password' description='Your password'>
+        <Space h="md" />
+        
+        <InputWrapper required label='Password' 
+        // description='Your password'
+        >
           <PasswordInput {...form.getInputProps('password')} />
         </InputWrapper>
-        <Button type='submit'>Register</Button>
+        <Space h="md" />
+        <Button type='submit'>Get Started</Button>
       </form>
     </Box>
+    </body>
+    
   )
 }
 

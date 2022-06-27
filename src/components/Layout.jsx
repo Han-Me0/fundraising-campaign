@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import React, { Component }  from 'react';
 import { SessionContext } from '../contexts/SessionContext'
 import { NavLink } from 'react-router-dom'
 import { Logout } from 'tabler-icons-react'
@@ -56,7 +57,7 @@ const { isAuthenticated, logout } = useContext(SessionContext)
       }
       header={
         <Header height={60} p='xs'>
-          <Box sx={{ display: 'grid', gridTemplate: '1fr / 100px 1fr' }}>
+          <Box>
             <Image />
             <Title order={3} align='center'>
               Campaing homepge
@@ -66,7 +67,7 @@ const { isAuthenticated, logout } = useContext(SessionContext)
       }
       styles={{
         main: {
-          backgroundColor: '#E8D3B9',
+          // backgroundColor: '#E8D3B9',
         },
       }}
     >
@@ -79,4 +80,6 @@ const { isAuthenticated, logout } = useContext(SessionContext)
         );
 }
 
+//this was inside the Box
+// sx={{ display: 'grid', gridTemplate: '1fr / 100px 1fr' }}
 export default Layout;

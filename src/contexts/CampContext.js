@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import React, { Component }  from 'react';
 const CampContext = createContext();
 
 function CampContextProvider({children}) {

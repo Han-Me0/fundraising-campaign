@@ -1,4 +1,5 @@
 // src/pages/HomePage.js
+import React, { Component }  from 'react';
 
 function HomePage() {
     return (

@@ -1,4 +1,5 @@
 import { Box } from '@mantine/core'
+import React, { Component }  from 'react';
 import { useContext } from 'react'
 import { useState } from 'react'
 import AddButton from '../components/AddButton'

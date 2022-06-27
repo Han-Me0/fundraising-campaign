@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
 import { apiBase, checkToken } from '../utils/helper'
+import React, { Component }  from 'react';
 
 const SessionContext = createContext()
 
